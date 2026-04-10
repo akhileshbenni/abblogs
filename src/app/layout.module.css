@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.sidebarWrapper {
+  width: 275px;
+  border-right: 1px solid var(--border);
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+  max-width: 600px;
+  border-right: 1px solid var(--border);
+  min-height: 100vh;
+}
+
+.rightSidebar {
+  width: 350px;
+  padding: 12px 24px;
+}
+
+.trendingBox {
+  background-color: #16181c;
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.trendingBox h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.trendItem {
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.trendItem:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.trendCategory {
+  color: #71767b;
+  font-size: 13px;
+}
+
+.trendTitle {
+  font-weight: 700;
+  font-size: 15px;
+  margin: 2px 0;
+}
+
+.trendPosts {
+  color: #71767b;
+  font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .rightSidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebarWrapper {
+    width: 68px; /* Compact mode */
+  }
+}

@@ -1,0 +1,126 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding-top: 12px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.logo:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--text-muted);
+}
+
+.bottomSection {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 9999px;
+  color: var(--foreground);
+  font-size: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logoutButton:hover {
+  background-color: var(--hover);
+}
+
+.logoutButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px;
+  border-radius: 9999px;
+  width: fit-content;
+  transition: background-color 0.2s ease;
+  font-size: 20px;
+}
+
+.navLink:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navLink svg {
+  width: 26px;
+  height: 26px;
+}
+
+.postButton {
+  margin-top: 16px;
+  width: 90%;
+  height: 52px;
+  font-size: 17px;
+}
+
+.postIcon {
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 640px) {
+  .navText {
+    display: none;
+  }
+  
+  .navLink {
+    padding: 12px;
+  }
+
+  .postButton span {
+    display: none;
+  }
+
+  .postIcon {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .postButton {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

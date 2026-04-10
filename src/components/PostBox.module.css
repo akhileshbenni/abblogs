@@ -1,0 +1,92 @@
+.loginPrompt {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  color: #71767b;
+}
+
+.postBox {
+  display: flex;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+}
+
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea {
+  background: transparent;
+  border: none;
+  color: var(--foreground);
+  font-size: 20px;
+  resize: none;
+  min-height: 50px;
+  outline: none;
+  font-family: inherit;
+  padding-top: 8px;
+}
+
+.textarea::placeholder {
+  color: #71767b;
+}
+
+.formFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.mediaUploadLbl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--primary);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mediaUploadLbl svg {
+  width: 20px;
+  height: 20px;
+}
+
+.mediaUploadLbl:hover {
+  background-color: rgba(29, 155, 240, 0.1);
+}
+
+.submitBtn {
+  padding: 8px 16px;
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
