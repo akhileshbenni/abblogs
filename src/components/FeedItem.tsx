@@ -4,6 +4,7 @@ import { toggleLike } from "@/actions/post";
 import styles from "./FeedItem.module.css";
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
+import Link from "next/link";
 
 type FeedItemProps = {
   post: {
@@ -12,6 +13,7 @@ type FeedItemProps = {
     mediaUrl: string | null;
     mediaType: string | null;
     createdAt: Date;
+    authorId: string;
     author: {
       name: string | null;
     };
@@ -39,12 +41,14 @@ export default function FeedItem({ post, currentUserId }: FeedItemProps) {
 
   return (
     <article className={styles.container}>
-      <div className={styles.avatar}>
+      <Link href={`/profile/${post.authorId}`} className={styles.avatar}>
         {post.author.name?.charAt(0).toUpperCase()}
-      </div>
+      </Link>
       <div className={styles.contentArea}>
         <div className={styles.header}>
-          <span className={styles.authorName}>{post.author.name}</span>
+          <Link href={`/profile/${post.authorId}`} className={styles.authorName}>
+            {post.author.name}
+          </Link>
           <span className={styles.timestamp}>
             · {formatDistanceToNow(new Date(post.createdAt))}
           </span>
